@@ -1,10 +1,19 @@
+{% assign latest_mode = page.latest_mode %}
 {% if paginator.posts %}
   <section class="section  typeset">
     <ul class="list  list--posts">
       {% for page in paginator.posts %}
+        {% assign fcategory = page.categories | first %}
+        {% if fcategory != site.latest and latest_mode == "include" %}
+          {% continue %}
+        {% endif %}
+        {% if fcategory == site.latest and latest_mode == "exclude" %}
+          {% continue %}
+        {% endif %}
         <li class="item  item--post">
           <article class="article  article--post">
 
+            <img src="{{ page.feature_image }}" />
             <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
             {% include post-meta.html %}
             {{ page.excerpt | markdownify | truncatewords: 60 }}
@@ -19,9 +28,18 @@
   <section class="section  typeset">
     <ul class="list  list--posts">
       {% for page in site.posts %}
+        {% assign fcategory = page.categories | first %}
+        {{ page.latest_mode }}
+        {% if fcategory != site.latest and latest_mode == "include" %}
+          {% continue %}
+        {% endif %}
+        {% if fcategory == site.latest and latest_mode == "exclude" %}
+          {% continue %}
+        {% endif %}
         <li class="item  item--post">
           <article class="article  article--post">
 
+            <img src="{{ page.feature_image }}" />
             <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
             {% include post-meta.html %}
             {{ page.excerpt | markdownify | truncatewords: 60 }}
