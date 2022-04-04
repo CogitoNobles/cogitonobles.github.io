@@ -4,7 +4,7 @@ title: "Australian Ecosystems are Devastated, and so is The Tourism Economy"
 author: "Katie Cheung"
 feature_image: https://static.wixstatic.com/media/147d93_80df6d21f51e44789429fb2f22647405~mv2.jpg/v1/fill/w_1480,h_985,al_c,q_90/147d93_80df6d21f51e44789429fb2f22647405~mv2.webp
 categories:
-  - Cogito IX
+  - Cogito X
   - Articles
 ---
 The 2019 Australian wildfires have sparked both positive and negative reactions from around the world. Natural disasters such as this cannot be solved by individual efforts, and a global response is needed to mitigate them. Crucial ecosystems and a staggering percentage of species populations have been devastated. These fires have not only greatly impacted Australia’s natural landscape, they have also taken an unprecedented toll on Australia’s tourism industry.  

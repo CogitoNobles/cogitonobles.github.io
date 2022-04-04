@@ -1,41 +1,107 @@
-{% assign latest_mode = page.latest_mode %}
-{% if paginator.posts %}
-  <section class="section  typeset">
-    <ul class="list  list--posts">
-      {% for page in paginator.posts %}
-        {% assign fcategory = page.categories | first %}
-        {% if fcategory != site.latest and latest_mode == "include" %}
-          {% continue %}
-        {% endif %}
-        {% if fcategory == site.latest and latest_mode == "exclude" %}
-          {% continue %}
-        {% endif %}
-        <li class="item  item--post">
-          <article class="article  article--post">
-
-            <img src="{{ page.feature_image }}" />
-            <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
-            {% include post-meta.html %}
-            {{ page.excerpt | markdownify | truncatewords: 60 }}
-
-          </article>
-        </li>
-      {% endfor %}
-    </ul>
-    {% include post-pagination.html %}
-  </section>
+{% if page.past_articles == "no" %}
+  {% assign filtered = site.posts | where_exp: "item","item.categories contains 'Cogito X'" %}
 {% else %}
+  {% assign filtered = site.posts | where_exp: "item","item.categories contains 'Past Editions'" %}
+{% endif %}
+
+{% assign len = filtered | size | minus: 1 | divided_by: 6 %}
+
+<script src="/clamp.min.js"></script>
+
+<div id="desktop-list">
+  {% for n in (0..len) %}
+    {% assign i = n | times: 6 %}
+    <table style="width: 90vw; max-width: 900px; margin: 0 auto;" id="box-{{ i }}">
+      <tr>
+        <td rowspan="2" class="big">
+          {% assign page = filtered[i] %}
+          {% if page %}
+            <a href="{{ site.baseurl }}{{ page.url }}">
+              <img src="{{ page.feature_image }}" />
+              <h2>{{ page.title }}</h2>
+            </a>
+            {% include post-meta.html %}
+            <div class="excerpt" id="excerpt-{{ i }}">{{ page.excerpt }}</div>
+            <script>
+              $clamp(document.getElementById("excerpt-{{ i }}"),{clamp: "auto"});
+            </script>
+          {% endif %}
+        </td>
+        {% assign i = i | plus: 1 %}
+        <td>
+          {% assign page = filtered[i] %}
+          {% if page %}
+            <a href="{{ site.baseurl }}{{ page.url }}">
+              <img src="{{ page.feature_image }}" />
+              <h2>{{ page.title }}</h2>
+            </a>
+            {% include post-meta.html %}
+          {% endif %}
+        </td>
+      </tr>
+      {% assign i = i | plus: 1 %}
+      <tr>
+        <td >
+          {% assign page = filtered[i] %}
+          {% if page %}
+            <a href="{{ site.baseurl }}{{ page.url }}">
+              <img src="{{ page.feature_image }}" />
+              <h2>{{ page.title }}</h2>
+            </a>
+            {% include post-meta.html %}
+          {% endif %}
+        </td>
+      </tr>
+    </table>
+    {% assign i = i | minus: 2 %}
+
+    <table style="width: 90vw; max-width: 900px; margin: 0 auto;">
+      <tr>
+        <td>
+          {% assign i = i | plus: 4 %}
+          {% assign page = filtered[i] %}
+          {% if page %}
+            <a href="{{ site.baseurl }}{{ page.url }}">
+              <img src="{{ page.feature_image }}" />
+              <h2>{{ page.title }}</h2>
+            </a>
+            {% include post-meta.html %}
+          {% endif %}
+        </td>
+        <td rowspan="2" class="big">
+          {% assign i = i | minus: 1 %}
+          {% assign page = filtered[i] %}
+          {% if page %}
+            <a href="{{ site.baseurl }}{{ page.url }}">
+              <img src="{{ page.feature_image }}" />
+              <h2>{{ page.title }}</h2>
+            </a>
+            {% include post-meta.html %}
+            <div class="excerpt">{{ page.excerpt }}</div>
+          {% endif %}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          {% assign i = i | plus: 2 %}
+          {% assign page = filtered[i] %}
+          {% if page %}
+            <a href="{{ site.baseurl }}{{ page.url }}">
+              <img src="{{ page.feature_image }}" />
+              <h2>{{ page.title }}</h2>
+            </a>
+            {% include post-meta.html %}
+          {% endif %}
+        </td>
+      </tr>
+    </table>
+  {% endfor %}
+</div>
+
+<main id="mobile-list" class="main container">
   <section class="section  typeset">
     <ul class="list  list--posts">
-      {% for page in site.posts %}
-        {% assign fcategory = page.categories | first %}
-        {{ page.latest_mode }}
-        {% if fcategory != site.latest and latest_mode == "include" %}
-          {% continue %}
-        {% endif %}
-        {% if fcategory == site.latest and latest_mode == "exclude" %}
-          {% continue %}
-        {% endif %}
+      {% for page in filtered %}
         <li class="item  item--post">
           <article class="article  article--post">
 
@@ -49,4 +115,51 @@
       {% endfor %}
     </ul>
   </section>
-{% endif %}
+</main>
+
+<style>
+  table td.big {
+    width: 60%;
+  }
+  table td {
+    padding: 2%;
+    padding-top: 0;
+    vertical-align: top;
+  }
+  .excerpt p,.excerpt a {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+  .excerpt a {
+    text-decoration: underline;
+  }
+  .content {
+    width: 100%;
+  }
+  h2 {
+    font-size: 1em;
+  }
+  .small {
+    padding: 0;
+  }
+
+  #mobile-list {
+    display: none;
+  }
+  @media only screen and (max-width: 576px) {
+    #mobile-list {
+      display: inline;
+    }
+    #desktop-list {
+      display: none;
+    }
+    .content {
+      width: 90vw;
+      margin-left: 5vw;
+    }
+  }
+</style>

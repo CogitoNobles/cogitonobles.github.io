@@ -4,11 +4,10 @@ title: "The Rising Power of the National Rifle Association"
 author: "Rhodes Martinez"
 feature_image: https://static.wixstatic.com/media/147d93_ce17a57d468e4675933b75d2bcf6c912~mv2.jpg/v1/fill/w_1480,h_833,al_c,q_90/147d93_ce17a57d468e4675933b75d2bcf6c912~mv2.webp
 categories:
-  - Cogito X
+  - Cogito IX
+  - Past Editions
   - Essays
 ---
-Introduction
-
 From the foundation of our country to the victories of the several wars that our great nation has achieved, they have all had one thing that propels us towards success: Firearms. During the American Revolution, the French supplied the Continental Army with Charleville flintlock muskets, with which our men fought back the British forces and gained our freedom. During the first and second World Wars, the Springfield and M1 Garand rifles slashed through enemy forces, resulting in victory on all fronts. However, what about the darker sides of these weapons and the rights and restrictions that these instruments inspired throughout their history?
 
 The Second Amendment was put in place so that all Americans could bear and protect themselves with arms, was it not? Gun control has been a disputed issue for more than a century, creating divides and tension between those for and against it. One group that opposes the very idea of gun control is the National Rifle Association of America (NRA), founded in 1871 as an organization devoted “to protect the U.S. Constitution, especially as regards the Second Amendment right to keep and bear arms; to promote public safety and national defense; to train members of law enforcement, the military, the militia, and people of good repute in marksmanship and safety; to promote the shooting sports, including amateur competitions from the local to international levels; and to promote hunting and conservation.” The NRA has become a major pro-gun rights organization as the idea of gun control has become more prevalent. But how has the unclear definition of the Second Amendment, in regards to gun rights and gun control, and new gun laws that restrict the “right to bear arms” helped mold the NRA into a more influential gun lobbying organization than others? Why has the NRA reacted the way they have to the various gun control laws that restrict gun rights?
