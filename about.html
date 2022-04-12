@@ -3,19 +3,21 @@ feature_text: |
   # About Cogito
 feature_color: "#ffffff"
 feature_bg: "#0000ff60"
-feature_image: "/about.png"
+feature_image: "https://cdn.modlar.com/photos/8892/img/s_1920_x/old_and_new_city_landscape_58f9715eb08fa.jpg"
+blur_feature: "yes"
 ---
-Cogito is a student-run journal of social science and international affairs that publishes opinion articles and academic papers.  The journal is an open platform for the free expression of ideas and seeks to encourage dialogue on issues of global importance in the Nobles community.  Opinions expressed in the Journal belong solely to the respective authors and do not represent those of Noble and Greenough School.
+<div id="about-para">Cogito is a student-run journal of social science and international affairs that publishes opinion articles and academic papers.  The journal is an open platform for the free expression of ideas and seeks to encourage dialogue on issues of global importance in the Nobles community.  Opinions expressed in the Journal belong solely to the respective authors and do not represent those of Noble and Greenough School.</div>
 
+<hr />
 <div style="text-align: center; width: 90%; max-width: 900px; margin: 0 auto;">
   <h2>Staff</h2>
   {% for entry in site.staff %}
-    <p class="position">{{ entry.position }}</p>
-    <table style="width: 100%">
-      {% tablerow name in entry.names cols:2 %}
-        <span style="font-size: 1.1em;">{{ name }}</span>
-      {% endtablerow %}
-    </table>
+    <b class="position">{{ entry.position }}</b>
+    <br />
+    {% for name in entry.names %}
+      <span>{{ name }}</span>
+      <br />
+    {% endfor %}
     <br />
   {% endfor %}
 </div>
@@ -25,9 +27,18 @@ Cogito is a student-run journal of social science and international affairs that
     text-align: center;
     width: 50%;
   }
+  hr {
+    padding: 1em !important;
+  }
+  h2 {
+    padding: 0 !important;
+  }
   .position {
     width: 100%;
-    border-bottom: 1px solid black;
     margin-bottom: 0 !important;
+  }
+  #about-para {
+    text-align: justify;
+    text-justify: inter-word;
   }
 </style>

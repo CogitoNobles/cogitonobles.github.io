@@ -11,24 +11,23 @@
 <div id="desktop-list">
   {% for n in (0..len) %}
     {% assign i = n | times: 6 %}
-    <table style="width: 90vw; max-width: 900px; margin: 0 auto;" id="box-{{ i }}">
+    <table style="width: 90vw; max-width: 1000px; margin: 0 auto; border-bottom: 1px solid gray; margin-bottom: 1em;" id="table-{{ i }}">
       <tr>
         <td rowspan="2" class="big">
           {% assign page = filtered[i] %}
           {% if page %}
-            <a href="{{ site.baseurl }}{{ page.url }}">
-              <img src="{{ page.feature_image }}" />
-              <h2>{{ page.title }}</h2>
-            </a>
+            <div id="box-{{ i }}">
+              <a href="{{ site.baseurl }}{{ page.url }}">
+                <img src="{{ page.feature_image }}" />
+                <h2>{{ page.title }}</h2>
+              </a>
+            </div>
             {% include post-meta.html %}
             <div class="excerpt" id="excerpt-{{ i }}">{{ page.excerpt }}</div>
-            <script>
-              $clamp(document.getElementById("excerpt-{{ i }}"),{clamp: "auto"});
-            </script>
           {% endif %}
         </td>
         {% assign i = i | plus: 1 %}
-        <td>
+        <td id="box-{{ i }}">
           {% assign page = filtered[i] %}
           {% if page %}
             <a href="{{ site.baseurl }}{{ page.url }}">
@@ -41,7 +40,7 @@
       </tr>
       {% assign i = i | plus: 1 %}
       <tr>
-        <td >
+        <td id="box-{{ i }}" style="vertical-align: bottom;">
           {% assign page = filtered[i] %}
           {% if page %}
             <a href="{{ site.baseurl }}{{ page.url }}">
@@ -53,12 +52,12 @@
         </td>
       </tr>
     </table>
-    {% assign i = i | minus: 2 %}
 
-    <table style="width: 90vw; max-width: 900px; margin: 0 auto;">
+    {% assign i = i | plus: 1 %}
+    <table style="width: 90vw; max-width: 1000px; margin: 0 auto;">
       <tr>
-        <td>
-          {% assign i = i | plus: 4 %}
+        {% assign i = i | plus: 1 %}
+        <td id="box-{{ i }}">
           {% assign page = filtered[i] %}
           {% if page %}
             <a href="{{ site.baseurl }}{{ page.url }}">
@@ -72,18 +71,29 @@
           {% assign i = i | minus: 1 %}
           {% assign page = filtered[i] %}
           {% if page %}
-            <a href="{{ site.baseurl }}{{ page.url }}">
-              <img src="{{ page.feature_image }}" />
-              <h2>{{ page.title }}</h2>
-            </a>
+            <div id="box-{{ i }}">
+              <a href="{{ site.baseurl }}{{ page.url }}">
+                <img src="{{ page.feature_image }}" />
+                <h2>{{ page.title }}</h2>
+              </a>
+            </div>
             {% include post-meta.html %}
-            <div class="excerpt">{{ page.excerpt }}</div>
+            <div class="excerpt" id="excerpt-{{ i }}">{{ page.excerpt }}</div>
+            <script>
+              window.addEventListener("load",_ => {
+                var localHeight = document.getElementById("box-{{ i }}").clientHeight;
+                var otherHeight = (document.getElementById("box-{{ i | plus: 1 }}").clientHeight + document.getElementById("box-{{ i | plus: 2 }}").clientHeight) * 1.02;
+                console.log(localHeight,otherHeight);
+                var remHeight = parseFloat(getComputedStyle(document.documentElement).fontSize) * 1.5;
+                document.getElementById("excerpt-{{ i }}").firstChild.style["-webkit-line-clamp"] = Math.round((otherHeight - localHeight) / remHeight) - 2;
+              });
+            </script>
           {% endif %}
         </td>
       </tr>
       <tr>
-        <td>
-          {% assign i = i | plus: 2 %}
+        {% assign i = i | plus: 2 %}
+        <td id="box-{{ i }}">
           {% assign page = filtered[i] %}
           {% if page %}
             <a href="{{ site.baseurl }}{{ page.url }}">
@@ -126,25 +136,28 @@
     padding-top: 0;
     vertical-align: top;
   }
-  .excerpt p,.excerpt a {
+  .excerpt p {
     display: -webkit-box;
+    -webkit-line-clamp: 10;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 1.1rem;
-    line-height: 1.5;
-  }
-  .excerpt a {
-    text-decoration: underline;
+    line-height: 1.5rem;
+    padding-bottom: 0.2rem;
+    text-align: justify;
+    text-justify: inter-word;
   }
   .content {
     width: 100%;
   }
   h2 {
     font-size: 1em;
+    font-weight: bold;
   }
   .small {
     padding: 0;
+    line-height: normal;
   }
 
   #mobile-list {

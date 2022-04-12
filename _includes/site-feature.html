@@ -3,7 +3,7 @@
 
 {% if feature_text or feature_image %}
   <div class="feature"{% if feature_image %} style="background-image: url({{ feature_image }}); padding-bottom: 0"{% endif %}>
-    <div style="">
+    <div {% if page.blur_feature %}style="backdrop-filter: blur(4px);"{% endif %}>
       <div class="container  typeset"  id="feature-text">
         <h1 style="">{{ feature_text | markdownify }}</h1><br />
       </div>
@@ -14,7 +14,7 @@
 <style>
   #feature-text * {
      color: {{ page.feature_color }};
-     font-size: 250%;
+     font-size: 300%;
      -webkit-text-stroke: 1px black;
   }
 </style>
