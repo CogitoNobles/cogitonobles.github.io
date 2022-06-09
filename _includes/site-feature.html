@@ -3,9 +3,9 @@
 
 {% if feature_text or feature_image %}
   <div class="feature"{% if feature_image %} style="background-image: url({{ feature_image }}); padding-bottom: 0"{% endif %}>
-    <div style="backdrop-filter: blur(4px);">
-      <div class="container  typeset"  id="feature-text">
-        <h1 style="">{{ feature_text | markdownify }}</h1><br />
+    <div>
+      <div class="container typeset" id="feature-text" style="height: 50vh; width: 100%; max-width: 100%; margin: 0">
+        <h1>{{ feature_text | markdownify }}</h1><br />
       </div>
     </div>
   </div>
@@ -13,8 +13,32 @@
 
 <style>
   #feature-text * {
-     color: {{ page.feature_color }};
-     font-size: 300%;
-     -webkit-text-stroke: 1px black;
+     color: white;
+     font-size: 4.5rem;
+     line-height: 1em;
+     font-weight: normal;
+     text-decoration-thickness: 3px;
+     text-underline-offset: 5px;
+     margin-bottom: 0;
+     text-shadow: 1px 1px black;
+  }
+  #cogito-xii {
+    text-decoration: underline;
+  }
+  .feature {
+    height: 50vh;
+  }
+  @media only screen and (max-width: 576px) {
+    .feature {
+      background-attachment: scroll !important;
+    }
+  }
+
+  {% assign author = page.author %}
+  .feature {
+    {% if author == "Simon Juknelis" %}background-position-y: 60%;{% endif %}
+    {% if author == "Alan Cai" %}background-position-y: 65%;{% endif %}
+    {% if author == "Arthi Vithiananthan" %}background-position-y: 40%;{% endif %}
+    {% if author == "John Henry Lotz-McMillen" %}background-position-y: 35%;{% endif %}
   }
 </style>

@@ -16,13 +16,74 @@ layout: default
       {{ content }}
 
     {% endif %}
-
   </article>
 
-  {% include post-list.html %}
-
+  <div id="main-row">
+    {% include post-list.html %}
+    <div id="side-col">
+      <b>See past editions of Cogito</b>
+      <a href="/publications#cogito-xi">
+        <img src="/cogito_xi.png" />
+      </a>
+      <a href="/publications#cogito-x">
+        <img src="/cogito_x.png" />
+      </a>
+      <hr />
+      <b>Contributing authors to Cogito XII</b>
+      <p>Alan Cai</p>
+      <p>Angie Feng</p>
+      <p>Morgan Gibson</p>
+      <p>Simon Juknelis</p>
+      <p>Joanne Lee</p>
+      <p>Colin Levine</p>
+      <p>John Henry Lotz-McMillen</p>
+      <p>Corban Shih</p>
+      <p>Arthi Vithianathan</p>
+      <p>Ashley Wang</p>
+      <p>Jessica Zhang</p>
+    </div>
+  </div>
 </div>
 
 {% if page.aside == true %}{% include site-aside.html %}{% endif %}
 
 {% include site-footer.html %}
+
+<style>
+  #main-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+    flex-wrap: nowrap;
+  }
+  #side-col {
+    width: 33%;
+    border-left: 1px #08489c solid;
+    padding: 0 0.5em;
+    text-align: center;
+  }
+  #side-col b {
+    font-weight: bold;
+  }
+  #side-col a,#side-col img {
+    width: 80%;
+  }
+  #side-col p {
+    margin: 0 !important;
+  }
+  .content {
+    padding-bottom: 0.75em;
+  }
+  @media (max-width: 576px) {
+    #main-row {
+      flex-wrap: wrap;
+    }
+    #side-col {
+      display: none;
+      /*width: 90%;
+      border-left: 0;
+      border-top: 1px #08489c solid;*/
+    }
+  }
+</style>

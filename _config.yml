@@ -50,53 +50,55 @@ description: 'Noble and Greenough School'
 logo: /shield.png
 
 navigation_header:
-  - title: Cogito X
+  - title: Cogito XII
     url: /
-  - title: Past Articles
-    url: /past-articles/
   - title: About
     url: /about/
   - title: Publications
     url: /publications/
 
-latest: Cogito X
+latest: Cogito XII
 
 staff:
   - position: Editors-in-Chief
     names:
       - Katie Cheung
-      - Daniel Wang
-  - position: Content Manager
+      - Angie Feng
+  - position: Executive Managers
+    names:
+      - Will Grimes
+      - Jackie Zhang
+  - position: Layout Manager
     names:
       - Helen Cui
   - position: Managing Editors
     names:
-      - Will Grimes
-      - Jackie Zhang
-  - position: Layout Managers
+      - Mara DuBois
+      - Corban Shih
+      - Chris Tillen
+  - position: Copy Editors
     names:
-      - Armaan Bhojwani
-      - Norah Jankey
-  - position: Cover Artist
+      - Alan Cai
+      - Morgan Gibson
+      - Arnav Harve
+      - Simon Juknelis
+      - Joanne Lee
+      - Colin Levine
+      - Clare Struzziery
+      - Ashley Wang
+      - Eric Zhou
+  - position: Layout Editors
     names:
-      - Helen Cui
+      - Emily Bao
+      - Morgan Gibson
+      - Will Hesp
+      - Arthi Vithiananthan
+      - Ashley Wang
+      - Alex Yi
+      - Eric Zhou
   - position: Webmaster
     names:
       - Simon Juknelis
-  - position: Editors
-    names:
-      - Alan Cai
-      - Mara DuBois
-      - Angie Feng
-      - Arnav Harve
-      - Joanne Lee
-      - Colin Levine
-      - John Henry Lotz-McMillen
-      - Alejandra Mendez
-      - Om Paithankar
-      - Corban Shih
-      - Chris Tillen
-      - Eric Zhou
 navigation_footer:
   - title: Back to top
     url: '#top'

@@ -2,25 +2,77 @@
 layout: default
 ---
 
-{% include site-header.html %}
+{% include site-header.html blur="no" %}
 
-<main class="main  container">
 
-  <article class="article  article--post  content  typeset">
 
-    <h1>{{ page.title }}</h1>
-    {% include post-meta.html %}
-    <div id="content">{{ content }}</div>
+    <div id="main-row">
+      <div id="main-col">
+        <div id="main-col-items">
+          <article class="article  article--post  content  typeset">
+            <h1>{{ page.title }}</h1>
+            <div id="content">{{ content }}</div>
+          </article>
+          <hr />
+          <p class="h3">Related Posts</p>
+          <table class="related-table">
+            <tr>
+              {% assign i = 0 %}
+              {% for post in site.posts limit: 3 %}
+                <td class="related-post">
+                  <a href="{{ site.baseurl }}{{ post.url }}">
+                    <img src="{{ post.feature_image }}" id="related-{{ i }}" style="width: 100%" />
+                  </a>
+                </td>
+                {% assign i = i | plus: 1 %}
+              {% endfor %}
+            </tr>
+            <tr>
+              {% for post in site.posts limit: 3 %}
+                <td class="related-post">
+                  <a href="{{ site.baseurl }}{{ post.url }}">
+                    <h2>{{ post.title }}</h2>
+                  </a>
+                  <small>
+                    {% assign date_format = site.date_format | default: "%b %d, %Y" %}
+                    {{ "By&nbsp;" | append: post.author | append: "&nbsp;&middot; " }}{% if include.edition == "yes" %}Cogito&nbsp;XII&nbsp;&middot;&nbsp;{% endif %}<time datetime="{{ post.date | date_to_xmlschema }}" class="time">{{ post.date | date: date_format | replace: " ","&nbsp;" }}</time>
+                  </small>
+                </td>
+              {% endfor %}
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div id="side-col">
+        <p style="margin-bottom: 0.8em">{% include post-meta.html edition="yes" %}</p>
+        <p>{% include nav-share.html %}</p>
+        <hr />
+        <b>See past editions of Cogito</b>
+        <a href="/publications">
+          <img src="/cogito_x.png" />
+        </a>
+        <hr />
+        <b>Contributing authors to Cogito XII</b>
+        <p>Alan Cai</p>
+        <p>Angie Feng</p>
+        <p>Morgan Gibson</p>
+        <p>Simon Juknelis</p>
+        <p>Joanne Lee</p>
+        <p>Colin Levine</p>
+        <p>John Henry Lotz-McMillen</p>
+        <p>Corban Shih</p>
+        <p>Arthi Vithianathan</p>
+        <p>Ashley Wang</p>
+        <p>Jessica Zhang</p>
+      </div>
+    </div>
 
-    {% include nav-share.html %}
+
 
     {% include post-comments.html %}
 
-  </article>
+    <br />
 
-  {% if page.aside == true %}{% include site-aside.html %}{% endif %}
-
-</main>
 
 {% include site-footer.html %}
 
@@ -28,5 +80,93 @@ layout: default
   #content {
     text-align: justify;
     text-justify: inter-word;
+  }
+  article {
+    width: 100% !important;
+  }
+  #main-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+    margin: 0;
+  }
+  #main-col {
+    width: 75%;
+    padding: 0 1em;
+    margin: 0 !important;
+  }
+  #main-col-items {
+    width: 95%;
+    margin: 0 auto;
+  }
+  #side-col {
+    width: 33%;
+    border-left: 1px #08489c solid;
+    padding: 0 0.5em;
+    text-align: center;
+  }
+  #side-col b {
+    font-weight: bold;
+  }
+  #side-col a:not(.share a),#side-col img {
+    width: 80%;
+  }
+  #side-col p {
+    margin: 0;
+    padding: 0;
+  }
+  #side-col hr {
+    margin: 1em 0;
+  }
+  .left {
+    text-align: left;
+  }
+  .share a {
+    padding: 0.5em;
+  }
+  small {
+    color: gray;
+  }
+  .related-table {
+    border-spacing: 0.5em 0;
+    border-collapse: separate;
+    margin-left: -0.5em;
+    margin-right: -0.5em;
+  }
+  .related-post {
+    width: 33%;
+    vertical-align: top;
+  }
+  .related-post img {
+    max-height: 20%;
+    overflow-y: hidden;
+  }
+  .h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+  }
+  @media (max-width: 576px) {
+    #main-row {
+      flex-wrap: wrap;
+    }
+    #main-col {
+      width: 100vw;
+    }
+    #side-col {
+      display: none;
+      /*width: 90%;
+      border-left: 0;
+      border-top: 1px #08489c solid;*/
+    }
+    .related-post {
+      display: inline-block;
+      padding-top: 1em;
+    }
+    .h3 {
+      margin-top: 0.75em;
+    }
   }
 </style>

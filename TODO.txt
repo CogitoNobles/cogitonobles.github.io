@@ -1,0 +1,6 @@
+- Add a column w/ past editions and contributing authors √
+- Make navbar bg blue fg white √
+- Add blue borders, make titles of articles blue
+- Parallax effect √
+- Fade in/out effect (?)
+- Other new posts at bottom √

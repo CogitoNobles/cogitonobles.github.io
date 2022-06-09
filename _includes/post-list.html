@@ -1,5 +1,5 @@
 {% if page.past_articles == "no" %}
-  {% assign filtered = site.posts | where_exp: "item","item.categories contains 'Cogito X'" %}
+  {% assign filtered = site.posts | where_exp: "item","item.categories contains 'Cogito XII'" %}
 {% else %}
   {% assign filtered = site.posts | where_exp: "item","item.categories contains 'Past Editions'" %}
 {% endif %}
@@ -8,10 +8,10 @@
 
 <script src="/clamp.min.js"></script>
 
-<div id="desktop-list">
+<div id="desktop-list" style="width: 75%">
   {% for n in (0..len) %}
     {% assign i = n | times: 6 %}
-    <table style="width: 90vw; max-width: 1000px; margin: 0 auto; border-bottom: 1px solid gray; margin-bottom: 1em;" id="table-{{ i }}">
+    <table style="width: 95%; margin: 0 auto; border-bottom: 1px solid gray; margin-bottom: 1em" id="table-{{ i }}">
       <tr>
         <td rowspan="2" class="big">
           {% assign page = filtered[i] %}
@@ -21,86 +21,88 @@
                 <img src="{{ page.feature_image }}" />
                 <h2>{{ page.title }}</h2>
               </a>
+              <small>{% include post-meta.html %}</small>
             </div>
-            {% include post-meta.html %}
             <div class="excerpt" id="excerpt-{{ i }}">{{ page.excerpt }}</div>
           {% endif %}
         </td>
         {% assign i = i | plus: 1 %}
-        <td id="box-{{ i }}">
-          {% assign page = filtered[i] %}
-          {% if page %}
-            <a href="{{ site.baseurl }}{{ page.url }}">
-              <img src="{{ page.feature_image }}" />
-              <h2>{{ page.title }}</h2>
-            </a>
-            {% include post-meta.html %}
+        <td>
+          <div id="box-{{ i }}">
+            {% assign page = filtered[i] %}
+            {% if page %}
+              <a href="{{ site.baseurl }}{{ page.url }}">
+                <img src="{{ page.feature_image }}" />
+                <h2>{{ page.title }}</h2>
+              </a>
+              <small>{% include post-meta.html %}</small>
+            </div>
           {% endif %}
         </td>
       </tr>
       {% assign i = i | plus: 1 %}
       <tr>
-        <td id="box-{{ i }}" style="vertical-align: bottom;">
-          {% assign page = filtered[i] %}
-          {% if page %}
-            <a href="{{ site.baseurl }}{{ page.url }}">
-              <img src="{{ page.feature_image }}" />
-              <h2>{{ page.title }}</h2>
-            </a>
-            {% include post-meta.html %}
-          {% endif %}
+        <td style="vertical-align: bottom;">
+          <div id="box-{{ i }}">
+            {% assign page = filtered[i] %}
+            {% if page %}
+              <a href="{{ site.baseurl }}{{ page.url }}">
+                <img src="{{ page.feature_image }}" />
+                <h2>{{ page.title }}</h2>
+              </a>
+              <small>{% include post-meta.html %}</small>
+            {% endif %}
+          </div>
         </td>
       </tr>
     </table>
 
     {% assign i = i | plus: 1 %}
-    <table style="width: 90vw; max-width: 1000px; margin: 0 auto;">
+    <table style="width: 95%; border-bottom: 1px solid gray; margin: 0 auto; margin-bottom: 1em;">
       <tr>
         {% assign i = i | plus: 1 %}
-        <td id="box-{{ i }}">
-          {% assign page = filtered[i] %}
-          {% if page %}
-            <a href="{{ site.baseurl }}{{ page.url }}">
-              <img src="{{ page.feature_image }}" />
-              <h2>{{ page.title }}</h2>
-            </a>
-            {% include post-meta.html %}
-          {% endif %}
-        </td>
-        <td rowspan="2" class="big">
-          {% assign i = i | minus: 1 %}
-          {% assign page = filtered[i] %}
-          {% if page %}
-            <div id="box-{{ i }}">
+        <td>
+          <div id="box-{{ i }}">
+            {% assign page = filtered[i] %}
+            {% if page %}
               <a href="{{ site.baseurl }}{{ page.url }}">
                 <img src="{{ page.feature_image }}" />
                 <h2>{{ page.title }}</h2>
               </a>
-            </div>
-            {% include post-meta.html %}
+              <small>{% include post-meta.html %}</small>
+            {% endif %}
+          </div>
+          {% if i == 10 %}
             <div class="excerpt" id="excerpt-{{ i }}">{{ page.excerpt }}</div>
-            <script>
-              window.addEventListener("load",_ => {
-                var localHeight = document.getElementById("box-{{ i }}").clientHeight;
-                var otherHeight = (document.getElementById("box-{{ i | plus: 1 }}").clientHeight + document.getElementById("box-{{ i | plus: 2 }}").clientHeight) * 1.02;
-                console.log(localHeight,otherHeight);
-                var remHeight = parseFloat(getComputedStyle(document.documentElement).fontSize) * 1.5;
-                document.getElementById("excerpt-{{ i }}").firstChild.style["-webkit-line-clamp"] = Math.round((otherHeight - localHeight) / remHeight) - 2;
-              });
-            </script>
           {% endif %}
+        </td>
+        <td rowspan="2" class="big">
+          <div id="big-{{ i }}">
+            {% assign i = i | minus: 1 %}
+            {% assign page = filtered[i] %}
+            {% if page %}
+              <div id="box-{{ i }}">
+                <a href="{{ site.baseurl }}{{ page.url }}">
+                  <img src="{{ page.feature_image }}" />
+                  <h2>{{ page.title }}</h2>
+                </a>
+              </div>
+              <small>{% include post-meta.html %}</small>
+              <div class="excerpt" id="excerpt-{{ i }}">{{ page.excerpt }}</div>
+            {% endif %}
+          </div>
         </td>
       </tr>
       <tr>
         {% assign i = i | plus: 2 %}
-        <td id="box-{{ i }}">
+        <td id="box-{{ i }}"  style="vertical-align: bottom;">
           {% assign page = filtered[i] %}
           {% if page %}
             <a href="{{ site.baseurl }}{{ page.url }}">
               <img src="{{ page.feature_image }}" />
               <h2>{{ page.title }}</h2>
             </a>
-            {% include post-meta.html %}
+            <small>{% include post-meta.html %}</small>
           {% endif %}
         </td>
       </tr>
@@ -108,7 +110,7 @@
   {% endfor %}
 </div>
 
-<main id="mobile-list" class="main container">
+<main id="mobile-list">
   <section class="section  typeset">
     <ul class="list  list--posts">
       {% for page in filtered %}
@@ -127,6 +129,49 @@
   </section>
 </main>
 
+<script src="dotdotdot.js"></script>
+<script>
+  var maxBox = 9;
+  var dots = [];
+  Promise.all(Array.from(document.images).filter(img => !img.complete).map(img => new Promise(resolve => { img.onload = img.onerror = resolve; }))).then(() => {
+    for ( var i = 0; i < maxBox; i += 3 ) {
+      var emCnt = 3;
+      var boxA = document.getElementById("box-" + i);
+      var boxB = document.getElementById("box-" + (i + 1));
+      var boxC = document.getElementById("box-" + (i + 2));
+      var exc = document.getElementById("excerpt-" + i).firstElementChild;
+      exc.style.maxHeight = "calc(" + (boxB.clientHeight + boxC.clientHeight - boxA.clientHeight) + "px + " + emCnt + "em)";
+    }
+  });
+  document.addEventListener("DOMContentLoaded",function() {
+    for ( var i = 0; i < maxBox; i += 3 ) {
+      var exc = document.getElementById("excerpt-" + i).firstElementChild;
+      dots.push(new Dotdotdot(exc,{height: "watch",watch: true, truncate: "letter"}));
+    }
+    var exc = document.getElementById("excerpt-9").firstElementChild;
+    dots.push(new Dotdotdot(exc,{height: "watch",watch: true, truncate: "letter"}));
+    var exc = document.getElementById("excerpt-10").firstElementChild;
+    dots.push(new Dotdotdot(exc,{height: "watch",watch: true, truncate: "letter"}));
+    var count = 0;
+    var interval = setInterval(function() {
+      for ( var i in dots ) {
+        dots[i].API.truncate();
+      }
+      if ( ++count >= 2 ) clearInterval(interval);
+    },1000);
+  });
+  window.addEventListener("resize",function() {
+    for ( var i = 0; i < maxBox; i += 3 ) {
+      var emCnt = 3;
+      var boxA = document.getElementById("box-" + i);
+      var boxB = document.getElementById("box-" + (i + 1));
+      var boxC = document.getElementById("box-" + (i + 2));
+      var exc = document.getElementById("excerpt-" + i).firstElementChild;
+      console.log(boxA,boxB,boxC,exc);
+      exc.style.maxHeight = "calc(" + (boxB.clientHeight + boxC.clientHeight - boxA.clientHeight) + "px + " + emCnt + "em)";
+    }
+  });
+</script>
 <style>
   table td.big {
     width: 60%;
@@ -138,7 +183,6 @@
   }
   .excerpt p {
     display: -webkit-box;
-    -webkit-line-clamp: 10;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -147,6 +191,9 @@
     padding-bottom: 0.2rem;
     text-align: justify;
     text-justify: inter-word;
+  }
+  #excerpt-9 p,#excerpt-10 p {
+    max-height: 10em;
   }
   .content {
     width: 100%;
@@ -159,6 +206,12 @@
     padding: 0;
     line-height: normal;
   }
+  small {
+    color: gray;
+  }
+  #desktop-list table:last-child {
+    border: 0 !important;
+  }
 
   #mobile-list {
     display: none;
@@ -170,9 +223,8 @@
     #desktop-list {
       display: none;
     }
-    .content {
+    #mobile-list {
       width: 90vw;
-      margin-left: 5vw;
     }
   }
 </style>
