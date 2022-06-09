@@ -11,11 +11,13 @@ layout: default
         <div id="main-col-items">
           <article class="article  article--post  content  typeset">
             <h1>{{ page.title }}</h1>
+            <small class="mobile-meta">{% include post-meta.html edition="yes" %}</small>
             <div id="content">{{ content }}</div>
           </article>
+          <div class="mobile-meta">{% include nav-share.html %}</div>
           <hr />
           <p class="h3">Related Posts</p>
-          <table class="related-table">
+          <table id="related-table">
             <tr>
               {% assign i = 0 %}
               {% for post in site.posts limit: 3 %}
@@ -40,6 +42,23 @@ layout: default
                 </td>
               {% endfor %}
             </tr>
+            <main id="mobile-related">
+              <section class="section  typeset">
+                <ul class="list  list--posts">
+                  {% for page in site.posts limit: 3 %}
+                    <li class="item  item--post">
+                      <article class="article  article--post">
+
+                        <img src="{{ page.feature_image }}" />
+                        <h4><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h4>
+                        <div class="mobile-pad">{% include post-meta.html %}</div>
+
+                      </article>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </section>
+            </main>
           </table>
         </div>
       </div>
@@ -48,7 +67,10 @@ layout: default
         <p>{% include nav-share.html %}</p>
         <hr />
         <b>See past editions of Cogito</b>
-        <a href="/publications">
+        <a href="/publications#cogito-xi">
+          <img src="/cogito_xi.png" />
+        </a>
+        <a href="/publications#cogito-x">
           <img src="/cogito_x.png" />
         </a>
         <hr />
@@ -128,7 +150,7 @@ layout: default
   small {
     color: gray;
   }
-  .related-table {
+  #related-table {
     border-spacing: 0.5em 0;
     border-collapse: separate;
     margin-left: -0.5em;
@@ -145,8 +167,11 @@ layout: default
   .h3 {
     font-size: 1.5em;
     font-weight: bold;
-    margin-top: 0.25em;
+    margin-top: 0.5em;
     margin-bottom: 0.25em;
+  }
+  .mobile-meta,#mobile-related {
+    display: none;
   }
   @media (max-width: 576px) {
     #main-row {
@@ -161,12 +186,26 @@ layout: default
       border-left: 0;
       border-top: 1px #08489c solid;*/
     }
-    .related-post {
-      display: inline-block;
-      padding-top: 1em;
+    #related-table {
+      display: none;
     }
     .h3 {
       margin-top: 0.75em;
+    }
+    .mobile-meta,#mobile-related {
+      display: inline;
+    }
+    #mobile-related h4 {
+      line-height: 1.25em;
+    }
+    .mobile-pad {
+      padding-top: 0.7em;
+    }
+    #mobile-related li:not(:last-child) .mobile-pad {
+      padding-bottom: 1em;
+    }
+    #mobile-related li:last-child .mobile-pad {
+      padding-bottom: 0;
     }
   }
 </style>

@@ -152,13 +152,34 @@
     dots.push(new Dotdotdot(exc,{height: "watch",watch: true, truncate: "letter"}));
     var exc = document.getElementById("excerpt-10").firstElementChild;
     dots.push(new Dotdotdot(exc,{height: "watch",watch: true, truncate: "letter"}));
+    for ( var i = 0; i < maxBox; i += 3 ) {
+      var emCnt = 3;
+      var boxA = document.getElementById("box-" + i);
+      var boxB = document.getElementById("box-" + (i + 1));
+      var boxC = document.getElementById("box-" + (i + 2));
+      var exc = document.getElementById("excerpt-" + i).firstElementChild;
+      console.log(boxA,boxB,boxC,exc);
+      exc.style.maxHeight = "calc(" + (boxB.clientHeight + boxC.clientHeight - boxA.clientHeight) + "px + " + emCnt + "em)";
+    }
+    for ( var i in dots ) {
+      dots[i].API.truncate();
+    }
     var count = 0;
     var interval = setInterval(function() {
+      for ( var i = 0; i < maxBox; i += 3 ) {
+        var emCnt = 3;
+        var boxA = document.getElementById("box-" + i);
+        var boxB = document.getElementById("box-" + (i + 1));
+        var boxC = document.getElementById("box-" + (i + 2));
+        var exc = document.getElementById("excerpt-" + i).firstElementChild;
+        console.log(boxA,boxB,boxC,exc);
+        exc.style.maxHeight = "calc(" + (boxB.clientHeight + boxC.clientHeight - boxA.clientHeight) + "px + " + emCnt + "em)";
+      }
       for ( var i in dots ) {
         dots[i].API.truncate();
       }
-      if ( ++count >= 2 ) clearInterval(interval);
-    },1000);
+      //if ( ++count >= 2 ) clearInterval(interval);
+    },500);
   });
   window.addEventListener("resize",function() {
     for ( var i = 0; i < maxBox; i += 3 ) {
