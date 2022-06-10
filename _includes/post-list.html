@@ -154,6 +154,7 @@
     dots.push(new Dotdotdot(exc,{height: "watch",watch: true, truncate: "letter"}));
     for ( var i = 0; i < maxBox; i += 3 ) {
       var emCnt = 3;
+      if ( i == 3 ) emCnt = 0;
       var boxA = document.getElementById("box-" + i);
       var boxB = document.getElementById("box-" + (i + 1));
       var boxC = document.getElementById("box-" + (i + 2));
@@ -168,6 +169,7 @@
     var interval = setInterval(function() {
       for ( var i = 0; i < maxBox; i += 3 ) {
         var emCnt = 3;
+        if ( i == 3 ) emCnt = 0;
         var boxA = document.getElementById("box-" + i);
         var boxB = document.getElementById("box-" + (i + 1));
         var boxC = document.getElementById("box-" + (i + 2));
@@ -184,6 +186,7 @@
   window.addEventListener("resize",function() {
     for ( var i = 0; i < maxBox; i += 3 ) {
       var emCnt = 3;
+      if ( i == 3 ) emCnt = 0;
       var boxA = document.getElementById("box-" + i);
       var boxB = document.getElementById("box-" + (i + 1));
       var boxC = document.getElementById("box-" + (i + 2));
