@@ -4,7 +4,7 @@ title: "A Cybersecurity Crisis"
 author: "Angie Feng"
 feature_image: /cogito-xii-pictures/feng.jpeg
 categories:
-  - Cogito XII
+  - Cogito-XII
   - Articles
 ---
 In 2007, a study led by Michael Cukier, an assistant professor at the Clark School of the University of Maryland, calculated the average rate of cyberattacks by hackers on internet-accessible computers to be every 36 seconds in the United States. Since then, cyberattacks have become more frequent, with the number of cybersecurity breaches increasing by more than 68% from 2020 to 2021, beating the previous record by over 23%. The rise of cyberattacks has presented several difficulties to the United States national defense systems, as outdated security measures are forced to try and keep up with the rapid pace of technological development. With the increase in reliance upon technology, cyberattacks by hackers have become more impactful and disastrous than ever before. Thus, ensuring the nation’s cybersecurity and protecting civilian rights to data privacy should be a constant priority for national security.

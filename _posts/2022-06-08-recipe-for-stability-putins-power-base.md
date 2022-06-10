@@ -4,7 +4,7 @@ title: "Recipe for Stability: Putin’s Power Base"
 author: "Simon Juknelis"
 feature_image: /cogito-xii-pictures/juknelis.jpeg
 categories:
-- Cogito XII
+- Cogito-XII
 - Articles
 ---
 On February 24, 2022, the largest military mobilization in Europe since World War II began. With Russian President Vladimir Putin’s invasion of Ukraine, protests have sprung up in cities across Russia. They have given weight to the idea that this invasion might end with the upheaval of Putin’s regime and the end of his 24-year career as the head of Russian politics. However, Putin has built an extremely strong base of power that would be difficult to topple for any potential rebel group. He controls the citizenry through his power over the media, and he can assert his power over the newly empowered class of ruling elites that he created.

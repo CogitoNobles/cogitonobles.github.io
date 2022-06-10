@@ -4,7 +4,7 @@ title: "Steps Toward Growth: Feminism in China"
 author: "Ashley Wang"
 feature_image: /cogito-xii-pictures/wang.jpeg
 categories:
-- Cogito XII
+- Cogito-XII
 - Articles
 ---
 March is Women’s History Month, a time to celebrate the contributions women have made throughout history and in the present. Within this month, there is International Women’s Day, which is on March 8th. In 1975, the United Nations decided to honor an event from March 8th, 1917, when a group of women in Russia commenced a strike and protest for suffrage and peace. While Women’s History month and International Women’s Day are  prominent parts of American culture, they are not as largely recognized in China. Despite this, feminism in China has been gaining attraction and support in recent times.

@@ -4,7 +4,7 @@ title: "Centuries-Old Colonialism Found to Be Affecting the Present Climate Cris
 author: "Arthi Vithiananthan"
 feature_image: /cogito-xii-pictures/vithiananthan.jpeg
 categories:
-- Cogito XII
+- Cogito-XII
 - Articles
 ---
 In March 2020, a global pandemic put trade on hold, and experts were hopeful that the decline in transportation would help with climate change. A year later, the World Meteorological Organization’s State of the Global Climate report stated that temperatures were 1.2°C above pre-industrial levels worldwide. This may not seem like an alarming increase to most. However in 2018, policymakers were warned to limit worldwide temperatures to 1.5°C above pre-industrial levels, or else there would be irreversible consequences. These natural disasters are wrecking undeveloped countries, which collectively contribute less than 1 percent of global carbon emissions but are still the most affected by disasters created by climate change. What can the world blame for all of these issues? The answer is clear: colonialism and its foundational lack of empathy for the Earth is the root of our climate crisis.

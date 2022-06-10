@@ -4,7 +4,7 @@ title: "Congress’ Crooked Customs: Examining the Legitimacy of the 1957 Civil 
 author: "Corban Shih"
 feature_image: /cogito-xii-pictures/shih.jpeg
 categories:
-- Cogito XII
+- Cogito-XII
 - Articles
 ---
 On August 28, 1957, South Carolina Senator Strom Thurmond made his way to the Senate gym to take a lengthy spell in the sauna. Although seemingly mundane, other senators were aware of his intentions: Thurmond’s drawn-out trip meant he was preparing his body for a filibuster. The heavy perspiration created by the dry heat dehydrated Thurmond to such an extent that he lost a substantial amount of water weight. As bathroom breaks are not protected by senate procedure, Thurmond’s body would have to soak up water like a sponge as he sipped from his pitcher of water. Thurmond’s infamous filibuster would last a total of 24 hours and 18 minutes, shattering all records previously held by his Southern comrades.

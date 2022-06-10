@@ -4,7 +4,7 @@ title: "The Playbook to an Emerging WWIII"
 author: "Colin Levine"
 feature_image: /cogito-xii-pictures/levine.jpeg
 categories:
-  - Cogito XII
+  - Cogito-XII
   - Articles
 ---
 On February 24, 2022, the free world awoke in horror to see Russian forces engaged in an all-out assault against Ukrainian infrastructure, civilians, and independence. The Biden Administration, in coordination with the European Union, Canada, and many others, immediately responded with an expansive list of sanctions. Subsequently, the United States has banned virtually all imports from Russia, including oil and natural gas, and frozen all Russian assets in the United States. Essentially isolated from the global market, the Russian economy has fallen from 11th in the world to 22nd, and Russia’s currency, the ruble, has lost over 50% of its value. Nonetheless, the war rages on, the bombs continue to fall, and Russian President Vladimir Putin shows no intention of stopping. Furthermore, most of Europe has proven unable to sufficiently combat Russian aggression; the European Union has refused to cut off Russian imports due to its reliance on Russian oil. Likewise, the Western World continues to resist removing Russia from the SWIFT global interbank payments system, allowing Russia to maintain some role in the international market.

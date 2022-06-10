@@ -4,7 +4,7 @@ title: "What’s Going on in the Space Economy"
 author: "John Henry Lotz-McMillen"
 feature_image: /cogito-xii-pictures/lotz-mcmillen.png
 categories:
-  - Cogito XII
+  - Cogito-XII
   - Articles
 ---
 One trillion dollars is the estimated economic potential of space commerce by 2040, as predicted by investment bank Morgan Stanley. It has been very exciting to watch the momentum towards that potential build, as well as how the private sector and government space agencies have been learning to symbiotically work together to create the space market of today. Due to a few morbid accidents and loss of life, as well as a lack of fiscal motivation, meticulously planned NASA projects that have sucked heavy funding from the public are now recognized as largely an artifact of the past. While NASA is getting back into major projects, the revitalization in humanity’s efforts to approach the final frontier can be largely attributed to the involvement of the private sector in making space ventures affordable.

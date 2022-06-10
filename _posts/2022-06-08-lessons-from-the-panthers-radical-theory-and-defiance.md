@@ -4,7 +4,7 @@ title: "Lessons From The Panthers: Radical Theory and Defiance"
 author: "Jackie Zhang"
 feature_image: /cogito-xii-pictures/zhang.jpeg
 categories:
-- Cogito XII
+- Cogito-XII
 - Articles
 ---
 On October 28, 1967, leaders of the Black Panther Party, Huey Newton and Gene McKinney, were stopped by members of the Oakland Police Department. The situation quickly escalated, resulting in Patrolman John Frey being killed, Patrolman Herbert Heanes becoming wounded, and Newton being critically injured and arrested. Newton was charged with murder, assault, and kidnapping, but the Black Panther Party immediately went to work rallying behind Newton to call for his release. This brought the Black Panther Party into national and global prominence, making Huey a revolutionary icon. The phrase “Free Huey!” was adopted by protests across the nation. Founded in 1966 in Oakland, California by Huey Newton and Bobby Seale, the Black Panther Party provided resources for poor and disenfranchised Black Americans, challenged law enforcement, and confronted the American government. Instead of assimilating into American society, they wanted to fundamentally change the system of American capitalism. As protestors navigate the inequities and violence that plague marginalized peoples in the present, the radical resistance, community organizing, and anti-capitalist theory of the Black Panther Party can inform social activists involved in current movements both nationwide and global.
