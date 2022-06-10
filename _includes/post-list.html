@@ -159,7 +159,6 @@
       var boxB = document.getElementById("box-" + (i + 1));
       var boxC = document.getElementById("box-" + (i + 2));
       var exc = document.getElementById("excerpt-" + i).firstElementChild;
-      console.log(boxA,boxB,boxC,exc);
       exc.style.maxHeight = "calc(" + (boxB.clientHeight + boxC.clientHeight - boxA.clientHeight) + "px + " + emCnt + "em)";
     }
     for ( var i in dots ) {
@@ -174,7 +173,6 @@
         var boxB = document.getElementById("box-" + (i + 1));
         var boxC = document.getElementById("box-" + (i + 2));
         var exc = document.getElementById("excerpt-" + i).firstElementChild;
-        console.log(boxA,boxB,boxC,exc);
         exc.style.maxHeight = "calc(" + (boxB.clientHeight + boxC.clientHeight - boxA.clientHeight) + "px + " + emCnt + "em)";
       }
       for ( var i in dots ) {
@@ -191,7 +189,6 @@
       var boxB = document.getElementById("box-" + (i + 1));
       var boxC = document.getElementById("box-" + (i + 2));
       var exc = document.getElementById("excerpt-" + i).firstElementChild;
-      console.log(boxA,boxB,boxC,exc);
       exc.style.maxHeight = "calc(" + (boxB.clientHeight + boxC.clientHeight - boxA.clientHeight) + "px + " + emCnt + "em)";
     }
   });
