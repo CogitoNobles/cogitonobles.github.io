@@ -3,7 +3,7 @@
   <ul class="list list--nav">
     {% for item in site.navigation_footer %}
       <li class="item  item--nav{% if item.url == page.url %}  item--current{% endif %}">
-        <a href="{{ item.url }}">{{ item.title }}</a>
+        <a href="{{ item.url }}" style="font-size: 80%">{{ item.title }}</a>
       </li>
     {% endfor %}
   </ul>

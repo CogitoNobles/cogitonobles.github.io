@@ -1,5 +1,5 @@
 {% if page.past_articles == "no" %}
-  {% assign filtered = site.posts | where_exp: "item","item.categories contains 'Cogito-XII'" %}
+  {% assign filtered = site.posts | where_exp: "item","item.categories contains 'Cogito-XIII'" %}
 {% else %}
   {% assign filtered = site.posts | where_exp: "item","item.categories contains 'Past Editions'" %}
 {% endif %}
@@ -72,9 +72,6 @@
               <small>{% include post-meta.html %}</small>
             {% endif %}
           </div>
-          {% if i == 10 %}
-            <div class="excerpt" id="excerpt-{{ i }}">{{ page.excerpt }}</div>
-          {% endif %}
         </td>
         <td rowspan="2" class="big">
           <div id="big-{{ i }}">
@@ -131,7 +128,7 @@
 
 <script src="dotdotdot.js"></script>
 <script>
-  var maxBox = 9;
+  var maxBox = 15;
   var dots = [];
   Promise.all(Array.from(document.images).filter(img => !img.complete).map(img => new Promise(resolve => { img.onload = img.onerror = resolve; }))).then(() => {
     for ( var i = 0; i < maxBox; i += 3 ) {
@@ -148,13 +145,9 @@
       var exc = document.getElementById("excerpt-" + i).firstElementChild;
       dots.push(new Dotdotdot(exc,{height: "watch",watch: true, truncate: "letter"}));
     }
-    var exc = document.getElementById("excerpt-9").firstElementChild;
-    dots.push(new Dotdotdot(exc,{height: "watch",watch: true, truncate: "letter"}));
-    var exc = document.getElementById("excerpt-10").firstElementChild;
-    dots.push(new Dotdotdot(exc,{height: "watch",watch: true, truncate: "letter"}));
     for ( var i = 0; i < maxBox; i += 3 ) {
       var emCnt = 3;
-      if ( i == 3 ) emCnt = 0;
+      if ( i % 6 == 3 ) emCnt = 0;
       var boxA = document.getElementById("box-" + i);
       var boxB = document.getElementById("box-" + (i + 1));
       var boxC = document.getElementById("box-" + (i + 2));
@@ -168,7 +161,7 @@
     var interval = setInterval(function() {
       for ( var i = 0; i < maxBox; i += 3 ) {
         var emCnt = 3;
-        if ( i == 3 ) emCnt = 0;
+        if ( i % 6 == 3 ) emCnt = 0;
         var boxA = document.getElementById("box-" + i);
         var boxB = document.getElementById("box-" + (i + 1));
         var boxC = document.getElementById("box-" + (i + 2));
@@ -184,7 +177,7 @@
   window.addEventListener("resize",function() {
     for ( var i = 0; i < maxBox; i += 3 ) {
       var emCnt = 3;
-      if ( i == 3 ) emCnt = 0;
+      if ( i % 6 == 3 ) emCnt = 0;
       var boxA = document.getElementById("box-" + i);
       var boxB = document.getElementById("box-" + (i + 1));
       var boxC = document.getElementById("box-" + (i + 2));
@@ -213,9 +206,6 @@
     text-align: justify;
     text-justify: inter-word;
   }
-  #excerpt-9 p,#excerpt-10 p {
-    max-height: 10em;
-  }
   .content {
     width: 100%;
   }
@@ -231,6 +221,10 @@
     color: gray;
   }
   #desktop-list table:last-child {
+    border: 0 !important;
+    margin-bottom: -2em !important;
+  }
+  #desktop-list table:nth-last-child(2) {
     border: 0 !important;
   }
 
