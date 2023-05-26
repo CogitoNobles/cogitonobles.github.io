@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "iran"
+title: "Protests against Oppressive Laws in Iran"
 author: "Mara DuBois"
 feature_image: /cogito-xiv-pictures/dubois.jpg
 categories:
