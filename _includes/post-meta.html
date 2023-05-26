@@ -1,2 +1,2 @@
 {% assign date_format = site.date_format | default: "%b %d, %Y" %}
-{{ "By&nbsp;" | append: page.author | append: "&nbsp;&middot; " }}{% if include.edition == "yes" %}Cogito&nbsp;XII&nbsp;&middot;&nbsp;{% endif %}<time datetime="{{ page.date | date_to_xmlschema }}" class="time">{{ page.date | date: date_format | replace: " ","&nbsp;" }}</time>
+{{ "By&nbsp;" | append: page.author | append: "&nbsp;&middot; " }}{% if include.edition == "yes" %}Cogito&nbsp;XIV&nbsp;&middot;&nbsp;{% endif %}<time datetime="{{ page.date | date_to_xmlschema }}" class="time">{{ page.date | date: date_format | replace: " ","&nbsp;" }}</time>

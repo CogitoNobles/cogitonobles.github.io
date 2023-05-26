@@ -1,5 +1,5 @@
 {% if page.past_articles == "no" %}
-  {% assign filtered = site.posts | where_exp: "item","item.categories contains 'Cogito-XIII'" %}
+  {% assign filtered = site.posts | where_exp: "item","item.categories contains 'Cogito-XIV'" %}
 {% else %}
   {% assign filtered = site.posts | where_exp: "item","item.categories contains 'Past Editions'" %}
 {% endif %}
@@ -104,6 +104,7 @@
         </td>
       </tr>
     </table>
+    <br />
   {% endfor %}
 </div>
 

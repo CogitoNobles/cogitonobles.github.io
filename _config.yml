@@ -50,14 +50,14 @@ description: 'Noble and Greenough School'
 logo: /shield.png
 
 navigation_header:
-  - title: Cogito XIII
+  - title: Cogito XIV
     url: /
   - title: About
     url: /about
   - title: Publications
     url: /publications
 
-latest: Cogito XIII
+latest: Cogito XIV
 
 staff:
   - position: Editors-in-Chief

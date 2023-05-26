@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Revisiting Roe’s Reversal"
+author: "Corban Shih"
+feature_image: /cogito-xiv-pictures/shih.jpg
+categories:
+  - Cogito-XIV
+  - Articles
+---
+Plessy v. Ferguson in 1954, Baker v. Nelson in 2015, and now, Roe v. Wade in 2022. Each case was a landmark decision made by the Supreme Court, and each case was stricken down by a later verdict. For nearly fifty years, Roe stood as a protective measure for fundamental rights, implicit in the Fourteenth Amendment’s liberty clause. “No State shall make or enforce any law which shall abridge the privileges or immunities of citizens of the United States,” the Fourteenth Amendment reads. However, Roe’s reversal stands in a category of its own: each other landmark case stood as a doctrine that restricted individuals, while Roe protected individuals. Plessy v. Ferguson infamously established that it remained within states’ rights to enact segregation laws; Baker v. Nelson decided that restricting same-sex marriage licenses was constitutionally sound; Roe protected the abortion rights of pregnant people in the United States. Dobbs v. Jackson, the 2022 case which overturned Roe, concluded that the Constitution does not confer a right to abortion, leaving its legality up to each individual state. 
+
+When Cogito last covered Roe v. Wade in December 2021, it was posited that a domino effect of trigger laws would render abortion illegal in at least thirteen states. So what have the actual repercussions looked like?
+
+Six states had trigger laws that came into effect almost immediately after the Supreme Court ruled on Dobbs v. Jackson: Kentucky, Louisiana, South Dakota, Idaho, Tennessee, and Texas. Now, a year later, eighteen states have enacted total or gestational bans: two states have made abortion completely unavailable, and eight states have bans that are temporarily blocked by local courts. With each state opting through legislation to either protect or ban abortion, most of the fallout is complete by this point in time. 	
+
+The Supreme Court is generally reluctant to overturn its own prior decisions, as the doctrine of stare decisis encourages the Court to follow precedent and maintain consistency in the law. This principle serves as an important check on the Court's power and helps to promote stability and predictability in the legal system. Since its inception in 1789, the Supreme Court has seen over 25,000 cases, overturning a prior precedent a total of 146 times. However, the Court has never in its history overturned a case, then overturned it again in a subsequent case. This means that cases such as Dobbs, are almost always final. The Court's decisions are typically influenced by a variety of factors, including changes in the political composition of the Court, evolving legal and social norms, and the specific legal issues presented in each case. These factors can lead to changes in the Court's interpretation of the law over time. Roe’s unfortunate reversal set a dangerous precedent for the protection of fundamental rights in the United States, and with a six to three conservative majority in the high court, it is highly improbable that this matter will be revisited in the foreseeable future. 
